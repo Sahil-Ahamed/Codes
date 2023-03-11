@@ -4,7 +4,7 @@ char main()
 {
     
   srand(time(0));
-  int otp=("%d",(rand()%10000-1000+1)+1);
+  int otp=rand()%(10000-1000);
   FILE* p;
   p=fopen("otp.txt","w");
   fprintf(p,"%d",otp);
