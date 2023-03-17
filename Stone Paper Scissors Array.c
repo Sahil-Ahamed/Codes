@@ -42,7 +42,7 @@ char main()
             if(ar[n]==ar[comp]){
             flag=0;
             }
-            else if((n==0 && comp==2) || (n==1 && comp== comp==0) || (n==2 && comp==1)){
+            else if((n==0 && comp==2) || (n==1 && comp==0) || (n==2 && comp==1)){
                 flag=1;
                 up++;
             }
