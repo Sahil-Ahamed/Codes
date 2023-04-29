@@ -147,7 +147,7 @@ char main()
 
         printf("Choose from below:-");
 
-        printf("\n1.PUSH\n2.Pop\n3.PEEK\n4.IS EMPTY\n5.IS FULL\n6.SIZE\n7.DISPLAY\nChoice:");
+        printf("\n1.PUSH\n2.POP\n3.PEEK\n4.IS EMPTY\n5.IS FULL\n6.SIZE\n7.DISPLAY\nChoice:");
 
         scanf("%d",&choice);
 
