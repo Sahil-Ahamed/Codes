@@ -7,7 +7,7 @@ struct node {
 };
 
 void traverse(struct node* traveller){
-    while((traveller->linker)!=NULL){
+    while(traveller!=NULL){
         printf("Values= %d\n",traveller->data);
         traveller=traveller->linker;
     }
