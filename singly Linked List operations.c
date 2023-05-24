@@ -32,6 +32,7 @@ void display(struct node* traveller){
 char main()
 {
     head=(struct node*)malloc(sizeof(struct node));
+    head->next=NULL;
     int element,size;
     printf("Enter number of nodes:");
     scanf("%d",&size);
