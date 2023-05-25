@@ -1,14 +1,15 @@
 void quick(int arr[], int start, int stop){
-   int p, q, pivot, temp;
+   int p=start;
+   int q=stop;
+   int pivot=start, temp;
    if(start < stop){
-      pivot = start;
-      p = start;
-      q = stop;
       while(p < q){
-         while(arr[p] <= arr[pivot] && p < stop)
+         while(arr[p] <= arr[pivot] && p < stop){
             p++;
-         while(arr[q] > arr[pivot])
+         }
+         while(arr[q] > arr[pivot]){
             q--;
+         }
          if(p < q){
             temp = arr[p];
             arr[p] = arr[q];
