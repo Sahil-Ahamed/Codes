@@ -4,12 +4,12 @@ class Armstrong{
                 System.out.print("Enter a number:");
                 int num=obj.nextInt();
                 int onum=num;
-                int len=num.length();
+                int len=String.valueOf(num).length();
                 int sum=0;
 
                 while(num!=0){
                         int rem=num%10;
-                        int cal=Math.pow(rem,len);
+                        int cal=(int) Math.pow(rem,len);
                         sum=sum+cal;
                         num=num/10;
                 }
@@ -22,6 +22,3 @@ class Armstrong{
                 }
         }
 }
-
-
-Find error
