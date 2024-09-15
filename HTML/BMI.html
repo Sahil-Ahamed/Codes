@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title>BMI Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body style="background-color: #e0f7fa; font-family: Arial, sans-serif">
+
+
+<a target="_blank" style="margin-left: 83%" href="https://c.tenor.com/vHyrC-oNzzYAAAAC/tenor.gif">Wanna LOOSE WEIGHT ??</a> <br>
+<a target="_blank" style="margin-left: 83%" href="https://c.tenor.com/ss4tSLCM7CYAAAAC/tenor.gif">Wanna GAIN WEIGHT ??</a>
+<center>
+    <div style="margin-top: 20px; border-radius: 12px; background-color: #ffffff;height: 700px; width: 500px; padding: 30px; position: relative">
+        <form>
+            <h3 style="color: #00796b; margin-bottom: 30px;">BMI Calculator</h3>
+            <input id="kg" placeholder="Enter Weight (kg)" type="number" step="any" style="text-align: center; width: 80%; padding: 12px; border-radius: 8px; border: 1px solid #00796b; margin-bottom: 10px;">
+            <input id="m" placeholder="Enter Height (m)" type="number" step="any" style="text-align: center; width: 80%; padding: 12px; border-radius: 8px; border: 1px solid #00796b; margin-bottom: 20px;"> <br>
+            <button type="button" onclick="calculate_bmi(),rotate_dial()" style="background-color: #00796b; color: white; padding: 12px 25px; border: none; border-radius: 8px; margin-bottom: 30px;">Calculate</button> <br> <br>
+            <input id="display" readonly style="text-align: center; width: 80%; padding: 12px; border-radius: 8px; border: 1px solid #00796b;" placeholder="Hoping to be normal 🤞"> <br> Your BMI
+        </form>
+
+        <img style="height: 300px; width: 480px; position: absolute; left: 12px; bottom: 2px;" src="https://www.pnbmetlife.com/content/dam/pnb-metlife/images/icons/bmi-calculator/meter.png">
+        <img id="dial" style="z-index: 1; height: 70px; width: 20px; position: absolute; left: 235px; bottom: 110px; transform-origin: bottom center" src="https://www.pnbmetlife.com/content/dam/pnb-metlife/images/icons/bmi-calculator/pointer.png">
+        <img style="z-index: 2; height: 30px; width: 50px; position: absolute; left: 220px; bottom: 96px;" src="https://www.pnbmetlife.com/content/dam/pnb-metlife/images/icons/bmi-calculator/halfCircle.png">
+    </div>
+</center>
+
+
+
+<script>
+    function calculate_bmi(){
+        document.getElementById('display').value = parseFloat( (document.getElementById('kg').value/ (document.getElementById('m').value * document.getElementById('m').value)) );
+        //"I know writing code in a single line affects readability, but it helps me understand the logic better as a beginner in JS." -------Sahil Ahamed
+    }
+    function rotate_dial(){
+        if(document.getElementById('display').value < 18.5 ){
+            document.getElementById('dial').style.transform = "rotate(-90deg)";
+        }
+        else if(document.getElementById('display').value >= 18.5 && document.getElementById('display').value <= 24.9){
+            document.getElementById('dial').style.transform = "rotate(-45deg)";
+        }
+        else if(document.getElementById('display').value >= 25.0 && document.getElementById('display').value <= 29.9){
+            document.getElementById('dial').style.transform = "rotate(0deg)";
+        }
+        else if(document.getElementById('display').value >= 30.0 && document.getElementById('display').value <= 34.9){
+            document.getElementById('dial').style.transform = "rotate(45deg)";
+        }
+        else if(document.getElementById('display').value >= 35.0){
+            document.getElementById('dial').style.transform = "rotate(90deg)";
+        }
+
+        // " I've used CSS in JS and long-form JS for learning, but I'll change my approach later. Don't Worry." ------Sahil Ahamed
+    }
+
+</script>
+
+
+</body>
+</html>
