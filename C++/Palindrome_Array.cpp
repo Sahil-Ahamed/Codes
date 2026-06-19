@@ -7,7 +7,7 @@ int main(){
     cout<<"Enter the size of word:";
     cin>>n;
     
-    char ar[n+1];
+    char ar[n+1]; //+1 to store null character at the end, or may cause buffer overflow.
     cout<<"Enter the word:";
     cin>>ar;
     
